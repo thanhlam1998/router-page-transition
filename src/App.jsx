@@ -1,5 +1,7 @@
 // @ts-nocheck
 import { useEffect, useState } from "react";
+import Banner from "./components/Banner";
+import Header from "./components/Header";
 import Loader from "./components/Loader";
 import image2 from "./images/image-2.jpg";
 import "./sass/main.scss";
@@ -19,6 +21,8 @@ function App() {
         <Loader setLoading={setLoading} />
       ) : (
         <>
+          <Header />
+          <Banner />
           {!loading && (
             <div className="transition-image final">
               <img src={image2} alt="image-2" />
